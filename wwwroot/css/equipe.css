@@ -1,0 +1,189 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+.img-integrantes {
+    width: 550px;
+}
+
+/*inicio da programação dos cards*/
+
+.colunaa {
+    width: 25%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.cards {
+    width: 350px;
+    height: 510px;
+    background-color: #000000;
+    margin-top: 100px;
+    border-radius: 10%;
+    box-shadow: 2rem 0 2rem #6e6e8a;
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
+    margin-left: 30px;
+}
+
+    .cards:not(:first-child) {
+        margin-left: -50px;
+    }
+
+    .cards:hover {
+        transform: translateY(-20px);
+        transition: 0.4s ease-out;
+        background-color: #585b80d2;
+        box-shadow: 2rem 0 2rem #e5e5e8c3;
+        ;
+    }
+
+.botaoConheca {
+    cursor: pointer;
+    padding: 9px 25px;
+    background-color: #5E73CD;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: transform .3s linear;
+}
+
+    .botaoConheca:hover {
+        border: #5E73CD;
+        transition: 0.55s;
+        transform: scale(1.1);
+    }
+
+
+
+.imgCard {
+    display: flex;
+    justify-content: center;
+}
+
+.imgEquipe {
+    width: 250px;
+    height: 250px;
+    margin-top: 20px;
+}
+
+.nomeCard {
+    text-align: center;
+    font-family: 'Tilt Warp', cursive;
+    font-weight: 600;
+    font-size: 25px;
+    color: #fff;
+}
+
+.descricaoIntegrante {
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 13px;
+    margin: 12px;
+    color: #fff;
+}
+
+
+/*FOOTER*/
+
+.imgFooter {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+    .imgFooter:hover {
+        cursor: pointer;
+        background-color: #5E73CD;
+        border-radius: 13px;
+    }
+
+.alinhaFooter {
+    display: flex;
+    justify-content: center;
+}
+
+.txtFooter {
+    font-family: 'Poppins', sans-serif;
+    color: #D4DCFE;
+}
+
+    .txtFooter:hover {
+        cursor: pointer;
+        color: #5E73CD;
+        font-weight: bolder;
+    }
+
+.copy {
+    font-family: 'Poppins', sans-serif;
+    color: #5E73CD;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/*RESPONSIVIDADE*/
+/*tela TABLET*/
+@media (max-width: 999px) {
+
+    .colunaa {
+        width: 50%;
+    }
+
+    .img_integrantes {
+        width: 680px;
+    }
+
+    .cards {
+        width: 300px;
+        height: 500px;
+        background-color: #000000;
+        margin-top: 100px;
+        border-radius: 10%;
+        box-shadow: 2rem 0 2rem #6e6e8a;
+        transition: 0.4s ease-out;
+        position: relative;
+        left: 0px;
+    }
+
+    .imgEquipe {
+        width: 180px;
+        height: 180px;
+        margin-top: 20px;
+    }
+}
+
+/*tela CELULAR*/
+@media (max-width: 500px) {
+
+    .colunaa {
+        width: 100%;
+    }
+
+    .img_integrantes {
+        width: 435px;
+    }
+
+    .cards {
+        width: 300px;
+        height: 500px;
+        background-color: #000000;
+        margin-top: 100px;
+        border-radius: 10%;
+        box-shadow: 2rem 0 2rem #6e6e8a;
+        transition: 0.4s ease-out;
+        position: relative;
+        left: 0px;
+    }
+
+    .imgEquipe {
+        width: 180px;
+        height: 180px;
+        margin-top: 20px;
+    }
+}

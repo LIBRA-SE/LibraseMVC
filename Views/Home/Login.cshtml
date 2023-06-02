@@ -1,0 +1,43 @@
+﻿
+<link rel="stylesheet" href="~/css/login.css">
+
+
+<!-- Início Formulário -->
+
+<div class="main-login">
+
+    <div class="esquerda-login">
+        <img class="loginimg" src="~/img/txtLogin.png" alt="">
+        <img class="esquerda-img" src="~/img/icone1.png" alt="">
+    </div>
+
+    <div class="direita-login">
+        <div class="card-login">
+
+            <form id="form" method="post" asp-controller="Home" asp-action="LoginConta">
+                <h1>LOGIN</h1>
+
+
+                <div class="textfield">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" placeholder="Email" required>
+                </div>
+                <div class="textfield">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" placeholder="Senha" required>
+                </div>
+                <p>@TempData["resultadoLogin"]</p>
+                <div>
+                    <button class="btn-login" type="submit">Entrar</button>
+                    <button class="btn-login".>
+                        <a asp-area="" asp-controller="Home" asp-action="Cadastro">Cadastrar</a>
+                    </button>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- Fim Formulário -->

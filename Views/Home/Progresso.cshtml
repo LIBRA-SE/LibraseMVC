@@ -1,0 +1,181 @@
+﻿
+@model LibraseMVC.Models.Usuario
+
+<link rel="stylesheet" href="~/css/progresso.css">
+<link rel="stylesheet" href="~/css/acesso_progresso.css">
+
+@{
+    string formato = "";
+    if (Model.BytesArquivo != null) {
+        string imagemProduto = Convert.ToBase64String(Model.BytesArquivo);
+        formato = "data:image/png;base64," + imagemProduto;
+    }
+
+}
+<!-- INÍCIO MEU PROGRESSO DESCRIÇÃO/FOTO/USUÁRIO -->
+<div class="planoFundo">
+    <div>
+
+        <div class="cem">
+
+            <div class="coluna2">
+                <form method="post" enctype="multipart/form-data" asp-action="AddAvatar">
+
+                    <div class="container">
+                        <div>
+                            <label class="picture" for="picture__input" tabIndex="0">
+                                <img src="@formato" class="testando123" />
+                            </label>
+                            <div class="centro">
+                                <br />
+                                <button type="submit" class="btnSalvarP">Salvar</button>
+                            </div>
+                        </div>
+
+
+                        <input src="" type="file" name="picture__input" class="arquivos" id="picture__input" accept="image/png, image/jpeg">
+
+                        @* PAULO, PEÇO DESCULPAS. MAS NÃO DEU TEMPO DE ARRUMAR O CSS E A CLASS IMG :( *@
+
+
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="coluna2">
+                <div class="container">
+                    <div class="margemdesc">
+                        @{
+                            string login = Model.Login.ToString().Trim();
+                            string formato2 = login.ToString();
+
+                        }
+                        <p class="usuario">@formato2 </p>   <!-- nome do usuário será puxado do banco -->
+                        <div class="fundodesc">
+                            <br>
+                            <div class="formatoTitulo">
+                                <p class="tituloDescP">Descrição</p>
+                                <img src="~/img/contrato.png" class="imgDesc" onclick="showModal()" alt="">
+                            </div>
+                            @{
+                                string formato3;
+                                if (Model.Descricao != null)
+                                {
+                                    string descricao = Model.Descricao.ToString().Trim();
+                                    formato3 = descricao.ToString();
+                                }
+                                else
+                                {
+                                    formato3 = "Adicione sua descrição aqui";
+                                }
+                            }
+                            <div class="centro">
+
+                                <textarea class="textAreaDescricao" disabled name="" id="textAreaDescricao" cols="30" rows="10">@formato3</textarea>
+
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FIM MEU PROGRESSO DESCRIÇÃO/FOTO/USUÁRIO -->
+        <!-- INÍCIO MEU PROGRESSO CARDS -->
+        <!-- baixar imagem do título "meu progresso" -->
+        <img class="imgtxtP" src="~/img/txtmeuprogresso.png" alt="">
+
+        <div class="cem">
+
+            <div class="coluna">
+                <div class="container">
+                    <!-- card pendente -->
+                    <div class="cardP">
+                        <img class="imgprogresso" src="~/img/nãorealizado.png" alt="">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="coluna">
+                <div class="container">
+                    <!-- card em andamento -->
+                    <div class="cardP">
+                        <img class="imgprogresso" src="~/img/emAndamento.png" alt="">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="coluna">
+                <div class="container">
+                    <!-- card finalizado -->
+                    <div class="cardP">
+                        <img class="imgprogresso" src="~/img/finalizado.png" alt="">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FIM MEU PROGRESSO CARDS -->
+
+    </div>
+
+    @* INÍCIO EXCLUIR CONTA *@
+    <br>
+    <center><button id="excluir" class="btnExcluir">Excluir conta</button></center>
+
+    <dialog>
+
+        <h2 class="tituloModal">Você deseja excluir sua conta?</h2>
+        <div class="txtModal">
+            <p>Ao realizar essa ação, os dados do seu progresso serão perdidos.</p>
+            <p>Confirme somente se tiver certeza de que deseja prosseguir!</p>
+        </div>
+        <center>
+            <a id="excluir-conta" asp-controller="Home" asp-action="apagarConta" type="submit" class="btnResposta">Sim</a>
+            <a id="fechar" class="btnResposta">Não</a>
+        </center>
+    </dialog>
+
+    @* FIM EXCLUIR CONTA *@
+
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+
+            <form class="formDesc" id="form" method="post" asp-controller="Home" asp-action="AdicionarDesc">
+
+                <div class="row">
+                    <textarea class="textAreaModal" name="sobre" id="sobre" cols="30" rows="5" resize="none" placeholder="    Fale um pouco sobre você"></textarea>
+                </div>
+
+
+                <button class="btnSalvar" type="submit" onclick="closeModal()">Salvar</button>
+
+                <br>
+                <br>
+                <br>
+                <button class="btnCancelar" type="reset" onclick="closeModal()">Cancelar</button>
+            </form>
+
+        </div>
+
+
+
+
+    </div>
+</div>
+
+@section scripts{
+
+    <script src="~/js/avatar.js"></script>
+    <script src="~/js/modal.js"></script>
+    <script src="~/js/excluir.js"></script>
+
+}@*js"></script>*@

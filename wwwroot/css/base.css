@@ -1,0 +1,354 @@
+﻿/* Fonte corpo */
+/* font-family: 'Poppins', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000;
+    background-image: url("/img/fundo-2.png");
+}
+
+/*CABEÇALHO*/
+.logo {
+    height: 130px;
+    width: 130px;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+a,
+button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #050607;
+    text-decoration: none;
+    /* background-color: #D4DCFE; */
+}
+
+.botao {
+    cursor: pointer;
+    padding: 9px 25px;
+    background-color: #5E73CD;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: transform .3s linear;
+}
+
+    .botao:hover {
+        border: #5E73CD;
+        transition: 0.55s;
+        transform: scale(1.1);
+    }
+
+/*IMAGEM HOME*/
+.img_home {
+    width: 100%;
+}
+
+.botaoEC {
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    padding: 2px 10px;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 30px;
+}
+
+.img-nav {
+    width: 170px;
+    height: 170px;
+}
+
+
+/*SOBRE O PROJETO*/
+.img_titulo {
+    width: 500px;
+}
+
+.centro {
+    text-align: center;
+}
+
+.txtProjeto {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    text-align: justify;
+    margin-top: 25px;
+    margin-left: 100px;
+    margin-right: 120px;
+    font-weight: 600;
+}
+
+.txtSobre {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    text-align: justify;
+    margin-top: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-weight: 600;
+}
+
+
+/*COLUNAS*/
+.cem {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.coluna {
+    width: 33%;
+}
+
+
+/*CARDS*/
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 350px;
+    height: 500px;
+    background-color: #D4DCFE;
+    margin-top: 100px;
+}
+
+.imagemCard {
+    display: flex;
+    justify-content: center;
+}
+
+.imgTelas {
+    width: 300px;
+    height: 250px;
+    margin-top: 20px;
+}
+
+.tituloCard {
+    text-align: center;
+    font-family: 'Tilt Warp', cursive;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.descricao {
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 13px;
+    margin: 12px;
+}
+
+
+/*FOOTER*/
+
+footer {
+    margin-top: 20px;
+}
+
+.imgFooter {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+    .imgFooter:hover {
+        cursor: pointer;
+        background-color: #5E73CD;
+        border-radius: 13px;
+    }
+
+.alinhaFooter {
+    display: flex;
+    justify-content: center;
+}
+
+.footerLink {
+    font-family: 'Poppins', sans-serif;
+    color: #D4DCFE;
+    margin-left: 10px;
+}
+
+    .footerLink:hover {
+        cursor: pointer;
+        color: #5E73CD;
+        font-weight: bolder;
+    }
+
+.copy {
+    font-family: 'Poppins', sans-serif;
+    color: #5E73CD;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/*RESPONSIVIDADE*/
+
+@media (max-width: 999px) {
+    nav {
+        margin-bottom: 196px;
+    }
+}
+
+/*tela CELULAR*/
+@media (max-width: 500px) {
+    .img_titulo {
+        width: 300px;
+    }
+
+    .txtProjeto {
+        font-size: 17px;
+        color: #fff;
+        margin-top: 25px;
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+    /*COLUNAS*/
+    .cem {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .coluna {
+        width: 100%;
+    }
+
+
+    /*CARDS*/
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .card {
+        width: 320px;
+        height: 450px;
+        margin-top: 100px;
+    }
+
+    .imagemCard {
+        display: flex;
+        justify-content: center;
+    }
+
+    .imgTelas {
+        width: 280px;
+        height: 220px;
+        margin-top: 15px;
+    }
+
+    .tituloCard {
+        font-size: 22px;
+    }
+
+    .descricao {
+        font-size: 13px;
+        margin: 10px;
+    }
+
+    /*FOOTER*/
+
+    footer {
+        background-color: #000;
+        height: 130px;
+    }
+
+    .imgFooter {
+        width: 35px;
+        height: 35px;
+        margin-bottom: 5px;
+        margin-top: 10px;
+    }
+
+        .imgFooter:hover {
+            border-radius: 8px;
+        }
+
+    .alinhaFooter {
+        display: flex;
+        text-align: center;
+    }
+
+    .txtFooter {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    .copy {
+        font-size: 15px;
+    }
+}
+
+/*tela TABLET 768px*/
+@media (max-width: 768px) {
+    .img_titulo {
+        width: 310px;
+    }
+
+    .txtProjeto {
+        font-size: 17px;
+        color: #fff;
+        margin-top: 25px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    /*COLUNAS*/
+    .cem {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .coluna {
+        width: 100%;
+    }
+
+
+    /*CARDS*/
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .card {
+        width: 350px;
+        height: 470px;
+        margin-top: 80px;
+    }
+
+    .imagemCard {
+        display: flex;
+        justify-content: center;
+    }
+
+    .imgTelas {
+        width: 290px;
+        height: 230px;
+        margin-top: 15px;
+    }
+
+    .tituloCard {
+        font-size: 23px;
+    }
+
+    .descricao {
+        font-size: 14px;
+        margin: 10px;
+    }
+}
+
+/*tela NOTEBOOK 1280px*/

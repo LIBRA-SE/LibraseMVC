@@ -1,0 +1,93 @@
+﻿@page
+@model ProjetoLibrase.Views.Home.IndexModel
+@{
+ <!-- Fim cabeçalho -->
+
+ <!-- imagem home -->
+    <img class="img_home" src="img/home.png" alt="">
+
+    <br>
+    <br>
+
+ <!-- Início SOBRE O PROJETO -->
+    <div class="centro">
+        <img class="img_titulo" src="~/img/txtConhaProjeto.png">
+    </div>
+
+    <p class="txtProjeto">
+        Com o intuito de abraçar as comunidades surda e muda que se comunicam através de LIBRAS
+        (Língua
+        Brasileira de
+        Sinais) foi desenvolvido o LIBRA-SE, um aplicativo voltado ao ensino da língua de sinais como um meio
+        acessível de propagação da inclusão em nosso país. Por meio de atividades didáticas, o usuário pode ter
+        uma experiência completa, com direito a introdução a gramática e treino de suas habilidades, de modo a
+        corrigir as mesmas. Como uma forma de demonstrar a aparência do aplicativo, segue abaixo três das principais
+        telas a serem exploradas por você:
+    </p>
+
+
+
+ <!-- Início cards -->
+    <div class="cem">
+
+        <!-- Tela login -->
+        <div class="coluna">
+            <div class="container">
+                <div class="card">
+                    <div class="imagemCard">
+                        <img class="imgTelas" src="~/img/telaLogin.PNG" alt="">
+                    </div>
+                    <div class="txtTela">
+                        <h2 class="tituloCard">Login</h2>
+                        <p class="descricao">
+                            Esta é a tela responsável por tornar possível o acesso do usuário em nossa aplicação, assim
+                            haverá o direcionamento aos iniciantes para que possam realizar seu cadastro ou, para os que
+                            já o tiverem efetuado, serão exigidos nome de usuário e senha para que possa seguir para sua
+                            devida atividade.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela Atividades -->
+        <div class="coluna">
+            <div class="container">
+                <div class="card">
+                    <div class="imagemCard">
+                        <img class="imgTelas" src="~/img/telaAtividades.PNG" alt="">
+                    </div>
+                    <div class="txtTela">
+                        <h2 class="tituloCard">Atividades</h2>
+                        <p class="descricao">
+                            Ao finalizar o login, a próxima página será a tela principal, que contém o acesso para todas
+                            as atividades qu o usuário poderá efetuar, desde introdução até a prática da aprendizagem de
+                            libras, além de realizar alterações em sua conta por meio das configurações.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tela Progresso -->
+        <div class="coluna">
+            <div class="container">
+                <div class="card">
+                    <div class="imagemCard">
+                        <img class="imgTelas" src="~/img/telaProgresso.PNG" alt="">
+                    </div>
+                    <div class="txtTela">
+                        <h2 class="tituloCard">Progresso</h2>
+                        <p class="descricao">
+                            Por último, mas não menos importante, os usuários também terão acesso a uma página exclusiva
+                            para analisar e checar seu desempenho nas respectivas atividades, sendo possível fazer a
+                            verificação do que ainda não foi visto, o que está em andamento e o que já foi finalizado.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/nav.js"></script>
+}

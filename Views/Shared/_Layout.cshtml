@@ -1,0 +1,87 @@
+﻿@using Microsoft.AspNetCore.Http;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProjetoLibrase</title>
+    <link rel="stylesheet" href="~/css/cabecalho.css" />
+    <link rel="stylesheet" href="~/css/base.css" />
+
+    @RenderSection("estilos", false)
+
+    <link rel="icon" href="~/img/logo.PNG">
+
+</head>
+<body>
+    <header>
+        @if (Context.Session.GetString("user") == null) {
+
+            <nav>
+                <img class="img-nav" src="~/img/logoeditada.png" alt="">
+
+                <div class="mobile-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+
+                <ul class="nav-list">
+                    @*<li> <a class="a" asp-area="" asp-controller="Home" asp-action="Progresso">Confira seu progresso</a></li>*@
+
+                    <li> <a class="a" asp-area="" asp-controller="Home" asp-action="Index">Aprenda Conosco</a></li>
+                    <li> <a class="a" asp-area="" asp-controller="Home" asp-action="Atividades">Descubra as atividades</a></li>
+                    <li> <a class="a" asp-area="" asp-controller="Home" asp-action="Equipe">Equipe</a></li>
+                    <li><a class="a" asp-area="" asp-controller="Home" asp-action="Login"><button class="botaoEC">Entrar</button></a></li>
+                    <li><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Cadastro"> <button class="botaoEC">Cadastrar</button></a></li>
+
+                </ul>
+            </nav>
+
+        } else {
+            <nav>
+                <img class="img-nav" src="~/img/logoeditada.png" alt="">
+
+                <div class="mobile-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+
+                <ul class="nav-list">
+                    <li> <a class="a" asp-area="" asp-controller="Home" asp-action="Index">Aprenda Conosco</a></li>
+                    <li> <a class="a" asp-area="" asp-controller="Home" asp-action="Atividades">Descubra as atividades</a></li>
+                    <li> <a class="a" asp-area="" asp-controller="Home" asp-action="Progresso">Confira seu progresso</a></li>
+                    <li> <a class="a" asp-area="" asp-controller="Home" asp-action="Equipe">Equipe</a></li>
+                    <li><a class="a" asp-area="" asp-controller="Home" asp-action="Sair"><button class="botaoEC">Sair</button></a></li>
+
+                </ul>
+            </nav>
+        }
+
+
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            <a href=""><img class="imgFooter" src="~/img/insta.png" alt=""></a>
+        </div>
+        <div class="alinhaFooter">
+            <a class="footerLink" asp-area="" asp-controller="Home" asp-action="Index">Aprenda Conosco</a>
+            <a class="footerLink" asp-area="" asp-controller="Home" asp-action="Atividades">Descubra as atividades</a>
+            <a class="footerLink" asp-area="" asp-controller="Home" asp-action="Equipe">Equipe</a>
+        </div>
+        <p class="copy">© 2023 Libra-se</p>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

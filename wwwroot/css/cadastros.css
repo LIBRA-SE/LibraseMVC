@@ -1,0 +1,189 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+    body * {
+        box-sizing: border-box;
+    }
+
+h1 {
+    font-family: 'Tilt Warp', cursive;
+}
+
+.span-required {
+    display: none;
+    font-size: 12px;
+    margin: 3px 0 0 1px;
+    color: red;
+}
+
+
+.main-login {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/img/fundo.png");
+}
+
+.esquerda-login h1 {
+    color: #D4DCFE;
+    font-weight: bolder;
+}
+
+.esquerda-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.esquerda-img {
+    width: 35vw;
+}
+
+.direita-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card-login {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: #D4DCFE;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+    .card-login h1 {
+        color: #000;
+        font-weight: 800;
+        margin: 0;
+    }
+
+.textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+    .textfield input {
+        width: 100%;
+        border: none;
+        border-radius: 10px;
+        padding: 15px;
+        background: #fff;
+        color: #000;
+        font-size: 12pt;
+        box-shadow: 0px 10px 40px #00000056;
+        outline: none;
+        box-sizing: border-box;
+    }
+
+    .textfield label {
+        color: #000;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .textfield input::placeholder {
+        color: #00000094;
+    }
+
+.cadastroimg {
+    width: 50%;
+}
+
+.loginimg {
+    width: 30%;
+}
+
+.btn-login2 {
+    width: 100%;
+    padding: 16px 0px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #fff;
+    background: #5f5192;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00000056;
+}
+
+/*Apoio para responsividade*/
+@media only screen and (max-width:950px) {
+    .card-login {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .main-login {
+        flex-direction: column;
+    }
+
+    .esquerda-login h1 {
+        display: none;
+    }
+
+    .direita-login {
+        width: 100%;
+        height: auto;
+    }
+
+    .esquerda-img {
+        width: 50vw;
+    }
+
+    .card-login {
+        width: 90%;
+    }
+}
+
+/*Continuação responsividade*/
+
+@media (max-width: 600px) {
+
+    .cadastroimg {
+        width: 190px;
+        margin-top: 150px;
+    }
+
+    .esquerda-img {
+        width: 150px;
+        margin-bottom: 30px;
+    }
+
+    .card-login {
+        width: 58%;
+        padding: 20px 25px;
+        background: #D4DCFE;
+        border-radius: 20px;
+        box-shadow: 0px 10px 40px #00000056;
+    }
+}

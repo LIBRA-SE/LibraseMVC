@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link rel="stylesheet" href="~/css/cadastros.css">
+
+<!-- Início Formulário -->
+<div class="main-login">
+
+    <div class="esquerda-login">
+        <img class="cadastroimg" src="~/img/txtCadastro.png" alt="">
+        <img class="esquerda-img" src="~/img/icone1.png" alt="">
+    </div>
+
+    <div class="direita-login">
+        <div class="card-login">
+
+
+            <form id="form" method="post" asp-controller="Home" asp-action="CadastroConta">
+                <h1>DADOS</h1>
+
+
+                <div class="textfield">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" class="inputs required" name="usuario" placeholder="Crie seu nome de suário" oninput="nameValidate()" id="usuario" required>
+                    <span class="span-required">O login deve ter no mínimo 5 caracteres</span>
+                </div>
+                <div class="textfield">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" placeholder="Insira seu e-mail" id="email" required>
+                    @*<input type="email" name="email" placeholder="Insira seu e-mail" id="email" class="inputs required" oninput="()" required>*@
+
+                </div>
+                <div class="textfield">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" placeholder="Senha" id="senha" class="inputs required" oninput="mainPasswordValidate()" required>
+                    <span class="span-required">A senha deve ter no mínimo 6 caracteres</span>
+
+                </div>
+                <div class="textfield">
+                    <label for="confirmar">Confirmar senha</label>
+                    <input type="password" name="confirmar" placeholder="Confirmar senha" id="confirm_password" class="inputs required" oninput="comparePassword()" required>
+                    <span class="span-required">As senhas devem ser iguais</span>
+
+                </div>
+                <p>@TempData["estadoCadastro"]</p>
+
+
+                <div>
+                    <button type="submit" onclick="signUp()" id="signUp" class="btn-login2">Finalizar</button>
+                </div>
+
+
+            </form>
+
+        </div>
+    </div>
+
+</div>
+
+@section scripts{
+
+    <script src="~/js/cadastro.js"></script>
+
+}
+
+<!-- Fim Formulário -->
